@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+ 
+<struts>
+	<package name="patent_package" namespace="/patentAction" extends="json-default,interceptor_package" strict-method-invocation="false">
+		<action name="*" class="patentAction" method="{1}">
+			<result name="toLogin">
+				/WEB-INF/views/main/login.jsp
+			</result>
+
+			<result name="check_success">
+				/WEB-INF/views/patent/patentCheck.jsp
+			</result>
+
+			<result name="patent_index">
+				/WEB-INF/views/patent/patentList.jsp
+			</result>
+
+			<result name="add_success" type="redirect">
+				/patentAction/list.action
+			</result>
+
+			<result name="delete_success" type="json">
+				<param name="root">deleteJson</param>
+			</result>
+
+			<interceptor-ref name="myInterceptorStack"/>
+		</action>
+	</package>
+</struts> 
+     

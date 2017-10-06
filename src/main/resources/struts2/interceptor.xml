@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+ 
+<struts>   
+	 <package name="interceptor_package" namespace="/interceptor" extends="struts-default" >
+		 <!--自定义拦截器 -->
+		 <interceptors>
+			 <interceptor name="loginInterceptor" class="com.scut.crm.web.filter.LoginInterceptor"/>
+			 <interceptor name="encodeInterceptor" class="com.scut.crm.web.filter.EncodeInterceptor"/>
+
+			 <interceptor-stack name="myInterceptorStack">
+				 <!-- 导入struts中默认的拦截器 -->
+				 <interceptor-ref name="defaultStack"/>
+				 <!-- 添加编码拦截器 -->
+				 <interceptor-ref name="encodeInterceptor"/>
+				 <!-- 添加登录拦截器 -->
+				 <interceptor-ref name="loginInterceptor"/>
+			 </interceptor-stack>
+
+		 </interceptors>
+	 </package>
+</struts>
+     

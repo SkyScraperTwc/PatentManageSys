@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="com.scut.crm.entity.Patent" table="patent">
+    
+        <id name="id" type="integer">
+            <column name="id" />
+            <generator class="native" />
+        </id>
+
+        <property name="serialNumber" type="string">
+            <column name="serialnumber" />
+        </property>
+
+        <property name="name" type="string">
+            <column name="name" />
+        </property>
+          
+        <property name="type" type="string">
+            <column name="type" />
+        </property>
+        
+        <property name="state" type="string">
+            <column name="state" />
+        </property>
+
+        <property name="createTime" type="date">
+            <column name="createTime" />
+        </property>
+
+        <property name="editTime" type="date">
+            <column name="editTime" />
+        </property>
+
+        <many-to-one name="author" class="com.scut.crm.entity.Author" column="authorId" lazy="false"/>
+    </class>
+</hibernate-mapping>
