@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+ 
+<struts>
+	<package name="file_package" namespace="/fileHandleAction" extends="json-default,interceptor_package" strict-method-invocation="false">
+
+		<action name="*" class="fileHandleAction" method="{1}">
+			<result name="toLogin">
+				/WEB-INF/views/main/login.jsp
+			</result>
+
+			<result name="toSearch">
+				/WEB-INF/views/file/search.jsp
+			</result>
+
+			<result name="file_index">
+				/WEB-INF/views/file/fileList.jsp
+			</result>
+
+			<result name="update_success" type="redirect">
+				/fileHandleAction/list.action
+			</result>
+
+			<result name="upload_success" type="redirect">
+				/fileHandleAction/list.action
+			</result>
+
+			<result name="upload_error">
+				/WEB-INF/views/main/message.jsp
+			</result>
+
+			<result name="search_success">
+				/WEB-INF/views/file/searchfileList.jsp
+			</result>
+
+			<!--以流的方式返回  -->
+			<result name="download_success" type="stream">
+				<!--以附件方式下载，downloadFileName对应Action类getDownloadFileName() -->
+				<param name="contentDisposition">attachment;filename="${downloadFileName}"</param>
+				<!--文件流  -->
+				<param name="contentType">application/octet-stream;charset=utf-8</param>
+				<!--下载源  -->
+				<param name="inputName">inputStream</param>
+				<!--缓冲流大小  -->
+				<param name="bufferSize">819200000</param>
+			</result>
+
+			<interceptor-ref name="myInterceptorStack"/>
+		</action>
+	</package>
+</struts> 
+     

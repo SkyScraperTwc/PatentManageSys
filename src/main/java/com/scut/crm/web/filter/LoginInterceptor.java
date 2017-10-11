@@ -5,9 +5,11 @@ import com.opensymphony.xwork2.interceptor.Interceptor;
 import com.scut.crm.constant.PageReturnConst;
 import com.scut.crm.entity.User;
 import com.scut.crm.utils.ScopeUtils;
+import org.springframework.stereotype.Component;
 
 import java.util.Map;
 
+@Component
 public class LoginInterceptor implements Interceptor {
 
 	private String[] urls;

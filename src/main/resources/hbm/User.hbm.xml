@@ -43,5 +43,9 @@
             <one-to-many class="com.scut.crm.entity.Author"/>
         </set>
 
+        <set name="fileBeanSet" table="file" inverse="true" lazy="false">
+            <key column="userId"/>
+            <one-to-many class="com.scut.crm.entity.FileBean"/>
+        </set>
     </class>
 </hibernate-mapping>

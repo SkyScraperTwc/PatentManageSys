@@ -1,6 +1,7 @@
 import org.junit.Test;
 import org.springframework.stereotype.Component;
 
+import java.io.File;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
@@ -11,8 +12,7 @@ public class JunitTest {
 
     @Test
     public void test1(){
-        UUID uuid = UUID.randomUUID();
-        System.out.println(uuid);
+        System.out.println(Boolean.valueOf("true123"));
     }
 
     @Test

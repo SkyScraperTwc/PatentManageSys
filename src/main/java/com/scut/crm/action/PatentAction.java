@@ -52,7 +52,8 @@ public class PatentAction {
         /**获取author*/
         Author author = authorService.getBySerialNumber(saveRequest.getAuthor_serialNumber());
 
-        /**重点：若同时两个线程进入创建了两个相同的Identifier，则会产生线程安全问题，要加锁确保线程安全*/
+        /**重点：逻辑判断被绕过，若同时两个线程进入创建了两个相同的Identifier，则会产生线程安全问题，要加锁确保线程安全*/
+        /**用消息队列来做是否可行？*/
         synchronized(this){
             /**获取patent的serialNumber*/
             String patentSerialNumber = patentService.getIdentifier(Patent.class);

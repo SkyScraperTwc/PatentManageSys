@@ -4,6 +4,8 @@ public final class EntityNumberConst {
 
     public final static int NEGATIVE_ONE = -1;
 
+    public final static String ZERO = "0";
+
     public final static String ONE = "1";
 
     public final static String TWO = "2";

@@ -10,6 +10,7 @@
 	<include file="struts2/user.xml"/>
 	<include file="struts2/author.xml"/>
 	<include file="struts2/patent.xml"/>
+	<include file="struts2/fileBean.xml"/>
 	<include file="struts2/interceptor.xml"/>
 </struts>
                      

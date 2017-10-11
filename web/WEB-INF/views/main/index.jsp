@@ -18,7 +18,7 @@
 <meta http-equiv="Pragma" content="no-cache">
 <meta http-equiv="Cache-control" content="no-cache">
 <meta http-equiv="Cache" content="no-cache">
-<title>企业信息管理后台</title>
+<title>专利信息管理后台</title>
 
 <link href="<%=basePath%>css/bootstrap.min.css" rel="stylesheet">
 <link href="<%=basePath%>css/metisMenu.min.css" rel="stylesheet">
@@ -46,7 +46,7 @@
 				class="icon-bar"></span> <span class="icon-bar"></span> <span
 				class="icon-bar"></span>
 		</button>
-		<a class="navbar-brand" href="#">BOOT企业信息管理后台 v1.0 &nbsp&nbsp&nbsp欢迎您：${sessionScope.user.username}</a>
+		<a class="navbar-brand" href="#">BOOT专利信息管理后台 v1.0 &nbsp&nbsp&nbsp欢迎您：${sessionScope.user.username}</a>
 		<a class="navbar-brand" href="<%=basePath%>authorityAction/logout.action" >注销</a>
 	</div>
 	<div class="navbar-default sidebar" role="navigation">
@@ -78,8 +78,13 @@
 					</a>
 				</li>
 				<li>
-					<a href="<%=basePath%>patentAction/list.action" class="active">
+					<a href="<%=basePath%>fileHandleAction/list.action" class="active">
 						<i class="fa fa-file fa-fw"></i> 我的云网盘
+					</a>
+				</li>
+				<li>
+					<a href="<%=basePath%>fileHandleAction/toSearch.action" class="active">
+						<i class="fa fa-search fa-fw"></i> 文件云搜索
 					</a>
 				</li>
 			</ul>

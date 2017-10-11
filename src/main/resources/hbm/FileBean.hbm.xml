@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="com.scut.crm.entity.FileBean" table="filebean">
+    
+        <id name="id" type="integer">
+            <column name="id" />
+            <generator class="native" />
+        </id>
+
+        <property name="fileName" type="string">
+            <column name="fileName" />
+        </property>
+
+        <property name="filePath" type="string">
+            <column name="filePath" />
+        </property>
+          
+        <property name="fileSize" type="int">
+            <column name="fileSize" />
+        </property>
+        
+        <property name="createTime" type="date">
+            <column name="createTime" />
+        </property>
+
+        <property name="editTime" type="date">
+            <column name="editTime" />
+        </property>
+
+        <property name="canShare" type="boolean">
+            <column name="canShare" />
+        </property>
+
+        <many-to-one name="user" class="com.scut.crm.entity.User" column="userId" lazy="false"/>
+    </class>
+</hibernate-mapping>

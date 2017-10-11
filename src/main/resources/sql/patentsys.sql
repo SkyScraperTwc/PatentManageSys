@@ -48,3 +48,17 @@ CREATE TABLE patent (
   PRIMARY KEY (id)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+DROP TABLE IF EXISTS file;
+
+CREATE TABLE file (
+  id INT NOT NULL AUTO_INCREMENT COMMENT 'id',
+  fileName varchar(200) UNIQUE NOT NULL COMMENT '文件名称',
+  filePath varchar(200) NOT NULL COMMENT '文件路径',
+  fileSize INT NOT NULL COMMENT '文件大小',
+  userId varchar(64) NOT NULL COMMENT '管理员ID',
+  canShare  NOT NULL COMMENT '是否共享',
+  createTime DATE NOT NULL COMMENT '创建时间',
+  editTime DATE NOT NULL COMMENT '修改时间',
+  PRIMARY KEY (id)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+

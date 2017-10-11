@@ -4,10 +4,12 @@ import com.opensymphony.xwork2.ActionInvocation;
 import com.opensymphony.xwork2.interceptor.Interceptor;
 import com.scut.crm.utils.ScopeUtils;
 import lombok.extern.log4j.Log4j;
+import org.springframework.stereotype.Component;
 
 import javax.servlet.http.HttpServletRequest;
 
 @Log4j
+@Component
 public class EncodeInterceptor implements Interceptor {
 
 	@Override

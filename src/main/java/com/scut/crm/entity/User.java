@@ -39,6 +39,10 @@ public class User {
 	 */
 	private Set<Author> authorSet;
 	/**
+	 * 专利文件
+	 */
+	private Set<FileBean> fileBeanSet;
+	/**
 	 * 创建时间
 	 */
 	private Date createTime;

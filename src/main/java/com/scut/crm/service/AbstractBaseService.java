@@ -5,6 +5,7 @@ import com.scut.crm.entity.Author;
 import com.scut.crm.entity.Patent;
 import com.scut.crm.entity.User;
 import com.scut.crm.utils.IdentifierUtils;
+import com.scut.crm.web.vo.query.FileShareRequest;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.List;
@@ -54,5 +55,6 @@ public abstract class AbstractBaseService<T> implements IBaseService<T> {
     public int save(T object) {
        return baseDao.save(object);
     }
+
 }
 

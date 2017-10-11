@@ -4,25 +4,25 @@
 <div id="page-wrapper">
 	<div class="row">
 		<div class="col-lg-12">
-			<h1 class="page-header">用户管理</h1>
+			<h1 class="page-header">管理员管理</h1>
 		</div>
 	</div>
 
-	<button class="btn btn-default" onclick="addCustomer()">添加用户</button>
+	<button class="btn btn-default" onclick="addCustomer()">添加管理员</button>
 
 <div class="row" id="userList">
 	<div class="col-lg-12">
 		<div class="panel panel-default">
-			<div class="panel-heading">用户信息列表</div>
+			<div class="panel-heading">管理员信息列表</div>
 				<table class="table table-bordered table-striped">
 					<thead>
 						<tr>
 							<th>序号</th>
 							<th>编号</th>
-							<th>用户名称</th>
+							<th>管理员名称</th>
 							<th>性别</th>
 							<th>手机</th>
-							<th>客户数量</th>
+							<th>作者数量</th>
 							<th>修改时间</th>
 							<th>操作</th>
 						</tr>
@@ -81,7 +81,7 @@
             url:"<%=basePath%>userAction/add.action",
             data:$("#addUserForm").serialize(),
             success:function(data) {
-                alert("用户添加成功");
+                alert("管理员添加成功");
                 window.location.href="<%=basePath%>userAction/list.action";
             }
         });
@@ -114,19 +114,19 @@
             "<%=basePath%>customerAction/update.action",
             $("#edit_customer_form").serialize(),
             function(data){
-                alert("用户信息更新成功！");
+                alert("管理员信息更新成功！");
                 window.location.href="<%=basePath%>customerAction/list.action";
             });
     }
 
     function deleteCustomer(id) {
-        if(confirm('确实要删除该用户吗?')) {
+        if(confirm('确实要删除该管理员吗?')) {
             $.post(
                 "<%=basePath%>customerAction/delete.action",
                 {"customerId":id},
                 function(data){
                     if(data=="delete_success"){
-                        alert("用户删除更新成功！");
+                        alert("管理员删除更新成功！");
                         window.location.href="<%=basePath%>customerAction/list.action";
                     }
                 });

@@ -4,11 +4,11 @@
 	"http://struts.apache.org/dtds/struts-2.3.dtd">
  
 <struts>   
-	 <package name="interceptor_package" namespace="/interceptor" extends="struts-default" >
+	 <package name="interceptor_package" namespace="/" extends="struts-default" >
 		 <!--自定义拦截器 -->
 		 <interceptors>
-			 <interceptor name="loginInterceptor" class="com.scut.crm.web.filter.LoginInterceptor"/>
-			 <interceptor name="encodeInterceptor" class="com.scut.crm.web.filter.EncodeInterceptor"/>
+			 <interceptor name="loginInterceptor" class="loginInterceptor"/>
+			 <interceptor name="encodeInterceptor" class="encodeInterceptor"/>
 
 			 <interceptor-stack name="myInterceptorStack">
 				 <!-- 导入struts中默认的拦截器 -->

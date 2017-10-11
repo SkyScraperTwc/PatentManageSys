@@ -32,7 +32,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 			</div>
 		</div>
 		<form class="form-vertical login-form" action="<%=basePath%>authorityAction/login.action" method="post" >
-			<h3 class="form-title" style="text-align: center;">企业信息管理系统登录</h3>
+			<h3 class="form-title" style="text-align: center;">专利信息管理后台登录</h3>
 			<div class="alert alert-error hide">
 				<button class="close" data-dismiss="alert"></button>
 				<span>请输入您的用户名和密码.</span>
@@ -151,7 +151,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 			</div>
 		</form>
 	</div>
-	<div class="copyright">2017 &copy; Party - 企业信息管理系统</div>
+	<div class="copyright">2016 &copy; Party - 专利信息管理后台</div>
 	<jsp:include page="/media/ui_js.jsp"></jsp:include>
 	<script src="<%=basePath%>media/js/jquery.validate.min.js" type="text/javascript"></script>
 	<script src="<%=basePath%>media/js/jquery.backstretch.min.js" type="text/javascript"></script>

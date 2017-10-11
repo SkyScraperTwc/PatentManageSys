@@ -25,4 +25,15 @@ public final class PageReturnConst {
 
     public final static String PATENT_INDEX = "patent_index";
 
+    public final static String FILE_INDEX = "file_index";
+
+    public final static String UPLOAD_ERROR = "upload_error";
+
+    public final static String UPLOAD_SUCCESS = "upload_success";
+
+    public final static String DOWNLOAD_SUCCESS = "download_success";
+
+    public final static String TOSEARCH = "toSearch";
+
+    public final static String SEARCH_SUCCESS = "search_success";
 }
